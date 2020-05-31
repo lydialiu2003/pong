@@ -219,7 +219,7 @@ end
 
 function push:resize(w, h)
   local dpiScale = love.window.getDPIScale()
-  if self._highdpi then w, h = w / pixelScale, h / pixelScale end
+  if self._highdpi then w, h = w / dpiScale, h / dpiScale end
   self._RWIDTH = w
   self._RHEIGHT = h
   self:initValues()
